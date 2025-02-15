@@ -184,10 +184,10 @@ export default function Post() {
     "https://th.bing.com/th/id/OIG1.CgTbIrO0vUXLNU28HMdC"
   );
   const [isEditing, setIsEditing] = useState(false);
-  const [tempImage, setTempImage] = useState(image); // Temporary state for image
+  const [tempImage, setTempImage] = useState(image); 
 
   const handleSave = () => {
-    setImage(tempImage); // Update actual image URL
+    setImage(tempImage); 
     setIsEditing(false);
   };
 
@@ -200,7 +200,7 @@ export default function Post() {
             <TextField
               fullWidth
               label="Image URL"
-              value={tempImage} // Temporary value for live preview
+              value={tempImage} 
               onChange={(e) => setTempImage(e.target.value)}
               margin="dense"
             />
