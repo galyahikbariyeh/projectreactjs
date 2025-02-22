@@ -10,6 +10,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import Switch from '@mui/material/Switch';
 import { useState, useEffect } from "react";
+import Home from "./home";
 export default function SideBar({mode,setMode}){
    
     return(
@@ -17,7 +18,8 @@ export default function SideBar({mode,setMode}){
         <Box position={"fixed"}>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
+               
                 <ListItemIcon>
                 <HomeIcon/>
                 </ListItemIcon>
@@ -28,7 +30,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <ArticleIcon/>
                 </ListItemIcon>
@@ -39,7 +41,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <GroupIcon/>
                 </ListItemIcon>
@@ -50,7 +52,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <WorkIcon/>
                 </ListItemIcon>
@@ -61,7 +63,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <PeopleAltIcon/>
                 </ListItemIcon>
@@ -72,7 +74,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <SettingsIcon/>
                 </ListItemIcon>
@@ -83,7 +85,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <AccountBoxIcon/>
                 </ListItemIcon>
@@ -94,7 +96,7 @@ export default function SideBar({mode,setMode}){
        </List>
        <List>
         <ListItem disablePadding>
-            <ListItemButton component="a" href="#home">
+            <ListItemButton component="a" href="">
                 <ListItemIcon>
                 <ModeNightIcon/>
                 </ListItemIcon>

@@ -260,7 +260,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
-
+import Profile from './myprofile';
+import { Link } from '@mui/material';
+import {useNavigate} from "react-router-dom"
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -301,6 +303,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [loginOpen, setLoginOpen] = React.useState(false); 
@@ -365,8 +368,18 @@ export default function PrimarySearchAppBar() {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+    > 
+      <MenuItem   onClick={()=>{
+        navigate("/profile")
+        console.log('hi')
+      }}> My profile
+      
+        
+        
+          <Link to="/profile">myprofile</Link>
+         
+       
+      </MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
@@ -389,7 +402,8 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit" >
+          
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
@@ -553,5 +567,9 @@ export default function PrimarySearchAppBar() {
     </Box>
   );
 }
+
+
+
+
 
 
